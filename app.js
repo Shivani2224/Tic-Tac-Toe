@@ -38,7 +38,6 @@ boxes.forEach((box) => {
 });
 function disableBtn() {
   for (let box of boxes) {
-    
     box.disabled = true;
   }
 }
@@ -47,9 +46,9 @@ const enableBtn = () => {
   for (let box of boxes) {
     box.disabled = false;
     box.innerText = "";
+    box.style.color = "";
     playerName.innerText = " Player 1 Turn";
   }
-
   count = 0;
 };
 
