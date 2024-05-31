@@ -48,6 +48,8 @@ const enableBtn = () => {
     box.innerText = "";
     playerName.innerText = " Player 1 Turn";
   }
+
+  count = 0;
 };
 
 const checkWinner = () => {
@@ -59,6 +61,10 @@ const checkWinner = () => {
     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
       if (pos1Val === pos2Val && pos2Val === pos3Val) {
         playerName.innerText = "winner is " + pos1Val;
+
+        boxes[pattern[0]].style.color = "red";
+        boxes[pattern[1]].style.color = "red";
+        boxes[pattern[2]].style.color = "red";
         disableBtn();
       }
     }
