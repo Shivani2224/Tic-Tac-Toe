@@ -38,6 +38,7 @@ boxes.forEach((box) => {
 });
 function disableBtn() {
   for (let box of boxes) {
+    
     box.disabled = true;
   }
 }

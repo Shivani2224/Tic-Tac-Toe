@@ -35,13 +35,13 @@ body {
 }
 .box:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 #reset {
   padding: 1vmin;
   font-size: 3vmin;
   background-color: #000000;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
   border-radius: 1rem;
   color: white;
   height: 5%;
@@ -61,4 +61,12 @@ body {
 }
 h1 {
   margin: 1vmin;
+}
+
+#reset:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #000000;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  transform: scale(1.2);
 }
