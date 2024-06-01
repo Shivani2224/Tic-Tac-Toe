@@ -29,9 +29,9 @@ boxes.forEach((box) => {
     checkWinner();
     count++;
 
-    if (count === 9 && !checkWinner()) {
+    if (count === 9 && checkWinner() === false) {
       console.log("no winner");
-      playerName.innerText = " Match Draw";
+      playerName.innerText = "Match Draw";
       disableBtn();
     }
   });
