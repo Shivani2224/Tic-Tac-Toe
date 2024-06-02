@@ -2,6 +2,7 @@ let boxes = document.querySelectorAll(".box");
 let resetbtn = document.querySelector("#reset");
 let turn = document.querySelector("#playerName");
 let turnO = true;
+let playerWinner = true;
 let count = 0;
 let winningPatten = [
   [0, 1, 2],
@@ -27,15 +28,20 @@ boxes.forEach((box) => {
     }
     box.disabled = true;
     checkWinner();
-    count++;
 
-    if (count === 9 && checkWinner() === false) {
+    count++;
+    if (count === 9 && !checkWinner()) {
       console.log("no winner");
       playerName.innerText = "Match Draw";
       disableBtn();
     }
   });
 });
+
+// const drawHandler = () => {
+
+//   }
+// };
 function disableBtn() {
   for (let box of boxes) {
     box.disabled = true;
@@ -66,6 +72,7 @@ const checkWinner = () => {
         boxes[pattern[1]].style.color = "red";
         boxes[pattern[2]].style.color = "red";
         disableBtn();
+        return true;
       }
     }
   }
