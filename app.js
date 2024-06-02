@@ -72,7 +72,7 @@ const checkWinner = () => {
 };
 
 const resetGame = () => {
-  let turnO = true;
+  turnO = true;
   enableBtn();
 };
 
