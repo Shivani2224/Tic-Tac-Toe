@@ -16,6 +16,17 @@ let winningPatten = [
 ];
 
 boxes.forEach((box) => {
+  box.addEventListener("mouseover", () => {
+    if (!box.disabled) {
+      box.innerText = turnO ? "X" : "O";
+    }
+  });
+  box.addEventListener("mouseout", () => {
+    if (!box.disabled) {
+      box.innerText = "";
+    }
+  });
+
   box.addEventListener("click", () => {
     if (turnO === true) {
       box.innerText = "X";

@@ -33,10 +33,10 @@ body {
   color: #60ab9a;
   border: none;
 }
-.box:hover {
+.box:hover:not(:disabled) {
   cursor: pointer;
   transform: scale(1.1);
-  
+  color: gray;
 }
 
 #reset {
